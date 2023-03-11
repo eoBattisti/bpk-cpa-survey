@@ -17,10 +17,10 @@ var KTAuthResetPassword = function() {
                         validators: {
                             regexp: {
                                 regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: 'The value is not a valid email address',
+                                message: 'Email inválido.',
                             },
 							notEmpty: {
-								message: 'Email address is required'
+								message: 'Informe um email.'
 							}
 						}
 					} 
@@ -58,10 +58,10 @@ var KTAuthResetPassword = function() {
 
                         // Show message popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                         Swal.fire({
-                            text: "We have send a password reset link to your email.",
+                            text: "Enviamos um link de redefinição de senha no seu email.",
                             icon: "success",
                             buttonsStyling: false,
-                            confirmButtonText: "Ok, got it!",
+                            confirmButtonText: "Ok",
                             customClass: {
                                 confirmButton: "btn btn-primary"
                             }
@@ -80,10 +80,10 @@ var KTAuthResetPassword = function() {
                 } else {
                     // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                     Swal.fire({
-                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        text: "Email inválido. Por favor, tente novamente.",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "Ok",
                         customClass: {
                             confirmButton: "btn btn-primary"
                         }
